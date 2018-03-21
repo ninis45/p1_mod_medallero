@@ -60,7 +60,7 @@
                    </td>
                    <td><?=$disciplina->nombre?></td>
                    <td><?=$tipos[$disciplina->tipo]?></td>
-                   <td><?=$disciplina->rama?($disciplina->rama==1?'Varonil':'Femenil'):'Indistinto'?></td>                   
+                   <td><?=$ramas[$disciplina->rama]?></td>                   
                    <td><?=$disciplina->activo=='1'?'Si':'No'?></td>
                    <td>
                         <?php echo anchor('admin/medallero/disciplinas/edit/'.$disciplina->id, lang('buttons:edit'), 'class="button edit"') ?> |

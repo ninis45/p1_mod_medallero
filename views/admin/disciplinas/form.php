@@ -17,7 +17,7 @@
             <div class="col-md-6">
                  <div class="form-group">
                                         <label><span class="text-danger">*</span>Rama</label>
-                                        <?=form_dropdown('rama',array('0'=>' Indistinto ','2'=>'Femenil','1'=>'Varonil','3'=>'Ambos'),$disciplina->rama,'class="form-control"');?>
+                                        <?=form_dropdown('rama',$ramas,$disciplina->rama,'class="form-control"');?>
                  </div>
                  <div class="form-group">
                     <label><span class="text-danger">*</span>Máximo participantes</label>

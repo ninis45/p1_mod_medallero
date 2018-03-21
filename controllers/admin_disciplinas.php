@@ -86,7 +86,15 @@ class Admin_disciplinas extends Admin_Controller {
          );
          
         $tipos = array('cultural'=>'Cultural','civico'=>'Cívico','deportivo'=>'Deportivo','conocimiento'=>'Conocimiento','academico'=>'Académico');
-        $this->template->set('tipos',$tipos);
+        $ramas = array(
+            0=> 'Indistinto',
+            1=> 'Varonil',
+            2=> 'Femenil',
+            3=> 'Varonil y Femenil'
+        );
+        $this->template->set('ramas',$ramas)
+                ->set('tipos',$tipos);
+        
     }
     
     function index()
@@ -148,7 +156,7 @@ class Admin_disciplinas extends Admin_Controller {
             if($this->disciplina_m->update($id,$input))
             {
 				
-				$this->session->set_flashdata('success',sprintf(lang('disciplina:save_success'),$input['nombre']));
+				$this->session->set_flashdata('success',lang('global:save_success'));
 				
 			}else{
 				$this->session->set_flashdata('error',lang('global:save_error'));
